@@ -2,13 +2,15 @@ package com.example.mobileapplicationdevelopment_2_;
 
 public class Doctors {
     private  int id;
-    private String name ;
-    private String  gmail ;
+    private String name;
+    private String  gmail;
+    private String  phone ;
 
-    public Doctors(int id, String name, String gmail) {
+    public Doctors(int id, String name, String gmail, String phone) {
         this.id = id;
         this.name = name;
         this.gmail = gmail;
+        this.phone = phone;
     }
 
     public int getId() {
@@ -33,6 +35,14 @@ public class Doctors {
 
     public void setGmail(String gmail) {
         this.gmail = gmail;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }
 
