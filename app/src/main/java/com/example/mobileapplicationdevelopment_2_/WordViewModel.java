@@ -1,11 +1,14 @@
 package com.example.mobileapplicationdevelopment_2_;
 
-import android.app.Application;
 
+
+
+import android.app.Application;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
 import java.util.List;
+
 
 public class WordViewModel extends AndroidViewModel {
 
@@ -13,13 +16,17 @@ public class WordViewModel extends AndroidViewModel {
 
     private final LiveData<List<Word>> mAllWords;
 
-    public WordViewModel (Application application) {
+    public WordViewModel(Application application) {
         super(application);
         mRepository = new WordRepository(application);
         mAllWords = mRepository.getAllWords();
     }
 
-    LiveData<List<Word>> getAllWords() { return mAllWords; }
+    LiveData<List<Word>> getAllWords() {
+        return mAllWords;
+    }
 
-    public void insert(Word word) { mRepository.insert(word); }
+    void insert(Word word) {
+        mRepository.insert(word);
+    }
 }
