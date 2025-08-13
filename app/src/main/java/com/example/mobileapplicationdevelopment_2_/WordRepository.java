@@ -1,14 +1,9 @@
 package com.example.mobileapplicationdevelopment_2_;
 
-
 import android.app.Application;
 import androidx.lifecycle.LiveData;
-
 import java.util.List;
-
-
 class WordRepository {
-
     private WordDao mWordDao;
     private LiveData<List<Word>> mAllWords;
 
@@ -17,6 +12,7 @@ class WordRepository {
         mWordDao = db.wordDao();
         mAllWords = mWordDao.getAlphabetizedWords();
     }
+
 
     LiveData<List<Word>> getAllWords() {
         return mAllWords;
