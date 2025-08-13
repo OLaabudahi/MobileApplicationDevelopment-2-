@@ -1,5 +1,7 @@
 package com.example.mobileapplicationdevelopment_2_;
 
+
+
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,9 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-/**
- * Activity for entering a word.
- */
 
 public class NewWordActivity extends AppCompatActivity {
 
@@ -38,3 +37,4 @@ public class NewWordActivity extends AppCompatActivity {
         });
     }
 }
+

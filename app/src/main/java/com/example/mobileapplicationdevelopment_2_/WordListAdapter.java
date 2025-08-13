@@ -1,7 +1,5 @@
 package com.example.mobileapplicationdevelopment_2_;
 
-
-
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;

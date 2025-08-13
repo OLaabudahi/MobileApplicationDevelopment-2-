@@ -1,9 +1,11 @@
 package com.example.mobileapplicationdevelopment_2_;
 
+
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.annotation.NonNull;
+
 
 
 @Entity(tableName = "word_table")

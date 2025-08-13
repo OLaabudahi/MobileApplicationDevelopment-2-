@@ -2,12 +2,12 @@ package com.example.mobileapplicationdevelopment_2_;
 
 
 
-
 import android.app.Application;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
 import java.util.List;
+
 
 
 public class WordViewModel extends AndroidViewModel {
