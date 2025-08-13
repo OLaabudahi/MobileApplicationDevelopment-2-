@@ -1,7 +1,4 @@
 package com.example.mobileapplicationdevelopment_2_;
-
-
-
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,4 +34,3 @@ public class NewWordActivity extends AppCompatActivity {
         });
     }
 }
-

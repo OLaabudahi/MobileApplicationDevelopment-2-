@@ -2,6 +2,7 @@ package com.example.mobileapplicationdevelopment_2_;
 
 
 
+
 import android.content.Context;
 
 import androidx.annotation.NonNull;
@@ -14,12 +15,12 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 
+
 @Database(entities = {Word.class}, version = 1, exportSchema = false)
 abstract class WordRoomDatabase extends RoomDatabase {
 
     abstract WordDao wordDao();
 
-    // marking the instance as volatile to ensure atomic access to the variable
     private static volatile WordRoomDatabase INSTANCE;
     private static final int NUMBER_OF_THREADS = 4;
     static final ExecutorService databaseWriteExecutor =
@@ -30,7 +31,7 @@ abstract class WordRoomDatabase extends RoomDatabase {
             synchronized (WordRoomDatabase.class) {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                            WordRoomDatabase.class, "word_database")
+                                    WordRoomDatabase.class, "word_database")
                             .addCallback(sRoomDatabaseCallback)
                             .build();
                 }
@@ -39,18 +40,14 @@ abstract class WordRoomDatabase extends RoomDatabase {
         return INSTANCE;
     }
 
-    /**
-     * Override the onCreate method to populate the database.
-     * For this sample, we clear the database every time it is created.
-     */
-    private static Callback sRoomDatabaseCallback = new Callback() {
+
+    private static RoomDatabase.Callback sRoomDatabaseCallback = new RoomDatabase.Callback() {
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
             super.onCreate(db);
 
             databaseWriteExecutor.execute(() -> {
-                // Populate the database in the background.
-                // If you want to start with more words, just add them.
+
                 WordDao dao = INSTANCE.wordDao();
                 dao.deleteAll();
 
