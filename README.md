@@ -10,9 +10,10 @@
  Room Database
  
 🛠️ Getting Started
+
 📋 Prerequisites
 Android Studio
-Firebase Account
+Room Database
 Android Device or Emulator
 
 📥 Installation Steps
@@ -22,7 +23,7 @@ https://github.com/OLaabudahi/MobileApplicationDevelopment-2-.git
 
 2-Open the project in Android Studio.
 
-3-Connect the app to Firebase by adding your Firebase configuration file to the project.
+3- Connect the application to the room database by adding the room database configuration file to the project.
 
 4-Build and run the app on an Android device or emulator.
 
