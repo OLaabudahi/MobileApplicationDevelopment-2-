@@ -28,9 +28,6 @@ https://github.com/OLaabudahi/MobileApplicationDevelopment-2-.git
 
 4-Build and run the app on an Android device or emulator.
 
-👉 Feed example:
-
-https://github.com/user-attachments/assets/bc76e2d1-621a-499f-91b4-13518fb067e9
 
 Our screens:
 
